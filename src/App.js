@@ -7,6 +7,7 @@ import About from './pages/About';
 import './App.css';
 import { useEffect } from 'react';
 import ProjectDetail from './pages/ProjectDetail';
+import FlappyGame from './pages/FlappyGame';
 
 function App() {
   useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
+            <Route path="/projects/flappy-bird" element={<FlappyGame />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

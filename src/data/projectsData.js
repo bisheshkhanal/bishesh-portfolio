@@ -40,15 +40,15 @@ const projects = [
     repoLink: "https://github.com/bisheshkhanal/SecureWebSuite", 
   },
   {
-    id: "flappy-bird-clone",
-    title: "Mock Flappy Bird Game",
-    description:
-      "Web clone of Flappy Bird with HTML, CSS, and JavaScript. Developed frontend structure and game logic for an interactive gameplay experience.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    images: [], // 🔶 Screenshots or gameplay GIF?
-    demoLink: null,
-    repoLink: "https://github.com/pranabmainali/Flappy_Bird_Game", 
-  }
+  id: "flappy-bird-clone",
+  title: "Mock Flappy Bird Game",
+  description:
+    "Web clone of Flappy Bird with HTML, CSS, and JavaScript. Developed frontend structure and game logic for an interactive gameplay experience.",
+  technologies: ["HTML", "CSS", "JavaScript"],
+  images: [],
+  demoLink: "/projects/flappy-bird", 
+  repoLink: "https://github.com/pranabmainali/Flappy_Bird_Game"
+}
 ];
 
 export default projects;
