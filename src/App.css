@@ -1,16 +1,26 @@
 :root {
-  --bg: #f9fafb;
-  --accent: #3f3d56;
-  --text-dark: #1f2937;
+  --background: #0a0f1a;
+  --card: #1a1f2e;
+  --accent: #38bdf8;
+  --text-light: #ffffff;
+  --text-muted: #94a3b8;
+  --hover: #60a5fa;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset background colors at highest level */
+html, body, #root {
+  background: var(--background);
+  color: var(--text-light);
+  min-height: 100vh;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg);
-  color: var(--text-dark);
-  min-height: 100vh;
+  background: linear-gradient(135deg, var(--background), #141b2d);
+  background-image: radial-gradient(#1f2937 0.5px, transparent 0.5px);
+  background-size: 30px 30px;
 }
 
 .app-container {
@@ -18,10 +28,14 @@ body {
   backdrop-filter: blur(10px);
   opacity: 1;
   animation: fadeIn 0.3s var(--transition-timing);
+  background: linear-gradient(135deg, var(--background), #141b2d);
+  color: var(--text-light);
 }
 
+/* Update navbar to be more visible on dark background */
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(26, 31, 46, 0.95);
+  color: var(--text-light);
   backdrop-filter: blur(10px);
   padding: 1.5rem 2rem;
   display: flex;
@@ -30,12 +44,13 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transform: translateY(0);
   transition: transform 0.3s var(--transition-timing);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-brand {
   font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(90deg, var(--text-dark), #40514e);
+  background: linear-gradient(90deg, var(--text-light), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
@@ -53,32 +68,17 @@ body {
 }
 
 .nav-link {
-  color: var(--text-dark);
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: var(--text-dark);
-  transition: width 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s, color 0.3s;
+  color: var(--text-light);
 }
 
 .nav-link:hover {
-  color: #1f2937;
-}
-
-.nav-link:hover::after {
-  width: 100%;
+  border-bottom: 2px solid var(--accent);
+  color: var(--hover);
 }
 
 .main-content {
@@ -92,7 +92,7 @@ body {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  background: linear-gradient(90deg, var(--text-dark), var(--accent));
+  background: linear-gradient(90deg, var(--text-light), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -101,6 +101,8 @@ p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  color: var(--text-light);
+  opacity: 0.9;
 }
 
 section {
@@ -118,16 +120,42 @@ section {
 }
 
 .project-card {
-  background: #ffffff;
+  background: var(--card);
+  color: var(--text-light);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  color: var(--text-light);
+  opacity: 0.9;
+  margin-bottom: 0;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  border-color: var(--accent);
+}
+
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-card a:hover {
+  color: var(--hover);
 }
 
 /* Animations */

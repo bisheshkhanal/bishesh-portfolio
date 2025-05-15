@@ -10,7 +10,7 @@ export default function Home() {
           passionate about learning how to build secure, scalable systems and full-stack applications.
         </p>
         <p>
-          I like projects that go beyond CRUD — things with real protocols, networking,
+          I like learning how to build projects that go beyond CRUD and code that involves real protocols, networking,
           distributed logic, or low-level control. I also strive to create real solutions to real-world problems, through my projects.
         </p>
       </div>

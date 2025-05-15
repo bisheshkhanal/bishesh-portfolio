@@ -5,8 +5,23 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import './App.css';
+import { useEffect } from 'react';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
+  useEffect(() => {
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    });
+
+    revealElements.forEach(el => observer.observe(el));
+  }, []);
+
   return (
     <Router>
       <div className="app-container">
@@ -22,6 +37,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

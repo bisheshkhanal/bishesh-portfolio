@@ -7,19 +7,10 @@ export default function About() {
     <section>
       <h2>About Me</h2>
       <p>
-        I'm currently completing my BSc at the University of Calgary, majoring in Natural Sciences
-        in Computer Science and Biological Sciences. My interests lie in backend engineering,
-        systems programming, network protocols, data science & analysis, and AI integration.
-      </p>
-      <p>
-        Outside class, I spend time learning about information technology from a wholistic lens, applying what I learn to my projects.
-        Alongside my studies, I am passionate about: 
-        <ul className="list-disc pl-6">
-          <li>Researching into health and fitness science</li>
-          <li>Exploring the outdoors with hikes, mountain biking, boating.etc.</li>
-          <li>Reading about philosophy and politics.</li>
-          <li>Self-development in a wholistic lens, and actively pursuing fulfillment in life.</li>
-        </ul>
+        I'm pursuing a BSc in Computer Science and Biology at the University of Calgary,
+        with interests in backend engineering, systems programming, and AI integration.
+        Beyond tech, I'm passionate about understanding fitness science, exploring the outdoors,
+        reading philosophy, and approaching personal growth holistically.
       </p>
       <p>Connect with me:</p>
       <div className="flex gap-6 pt-2">
