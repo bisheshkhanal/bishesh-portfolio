@@ -1,4 +1,6 @@
 export default function FlappyGame() {
+  console.log("📦 FlappyGame mounted");
+
   return (
     <section>
       <h2>Flappy Bird Clone</h2>
