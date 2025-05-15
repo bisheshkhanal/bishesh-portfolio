@@ -4,7 +4,7 @@ export default function FlappyGame() {
       <h2>Flappy Bird Clone</h2>
       <p>Click anywhere to jump and dodge the pipes. Simple, fun, and built with raw HTML/CSS/JS.</p>
       <iframe
-        src={`${process.env.PUBLIC_URL}/flappy/flappy.html`}
+        src={`${window.location.origin}/bishesh-portfolio/flappy/flappy.html`}
         width="420"
         height="620"
         title="Flappy Bird Game"

@@ -14,7 +14,7 @@ const projects = [
     title: "Quiplash-inspired Chat Game",
     description:
       "Real-time multiplayer text game using FastAPI containers and React frontend, with custom master clock and proxy servers for distributed consistency.",
-    technologies: ["FastAPI", "React", "Docker", "Distributed Systems"],
+    technologies: ["FastAPI", "React", "Docker", "Distributed Systems Principles"],
     images: [], // 🔶 Add screenshots
     demoLink: null,
     repoLink: "https://github.com/bisheshkhanal/Distributed-Chat-Game", 

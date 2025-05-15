@@ -2,6 +2,7 @@
 
 import { useParams } from 'react-router-dom';
 import projects from '../data/projectsData';
+import ChatGameDetails from '../content/chatgameDetails';
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -26,6 +27,11 @@ export default function ProjectDetail() {
           {project.images.map((src, idx) => (
             <img key={idx} src={src} alt={`${project.title} screenshot ${idx + 1}`} width="300" />
           ))}
+        </div>
+      )}
+      {project.id === "quiplash-chat-game" && (
+        <div style={{ marginTop: "2rem" }}>
+          <ChatGameDetails />
         </div>
       )}
       <div style={{ marginTop: '1.5rem' }}>
