@@ -16,11 +16,14 @@ function App() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
+          observer.unobserve(entry.target); // cleanup to avoid CPU buildup
         }
       });
     });
 
     revealElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect(); // clean up on unmount
   }, []);
 
   return (

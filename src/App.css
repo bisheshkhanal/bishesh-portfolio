@@ -19,13 +19,15 @@ body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(135deg, var(--background), #141b2d);
-  background-image: radial-gradient(#1f2937 0.5px, transparent 0.5px);
+  /* Optional: comment out for less GPU usage */
+  /* background-image: none; */
+  /* background-image: radial-gradient(#1f2937 0.5px, transparent 0.5px); */
   background-size: 30px 30px;
 }
 
 .app-container {
   min-height: 100vh;
-  backdrop-filter: blur(10px);
+  /* Removed: backdrop-filter: blur(10px); */
   opacity: 1;
   animation: fadeIn 0.3s var(--transition-timing);
   background: linear-gradient(135deg, var(--background), #141b2d);
