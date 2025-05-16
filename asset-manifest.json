@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/bishesh-portfolio/static/css/main.f42131a7.css",
-    "main.js": "/bishesh-portfolio/static/js/main.533b41a7.js",
+    "main.css": "/bishesh-portfolio/static/css/main.2d3bcf30.css",
+    "main.js": "/bishesh-portfolio/static/js/main.718c954c.js",
     "static/js/453.781387b8.chunk.js": "/bishesh-portfolio/static/js/453.781387b8.chunk.js",
     "static/media/profile.jpg": "/bishesh-portfolio/static/media/profile.740efb5d1da73fbfe6ec.jpg",
     "index.html": "/bishesh-portfolio/index.html",
-    "main.f42131a7.css.map": "/bishesh-portfolio/static/css/main.f42131a7.css.map",
-    "main.533b41a7.js.map": "/bishesh-portfolio/static/js/main.533b41a7.js.map",
+    "main.2d3bcf30.css.map": "/bishesh-portfolio/static/css/main.2d3bcf30.css.map",
+    "main.718c954c.js.map": "/bishesh-portfolio/static/js/main.718c954c.js.map",
     "453.781387b8.chunk.js.map": "/bishesh-portfolio/static/js/453.781387b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f42131a7.css",
-    "static/js/main.533b41a7.js"
+    "static/css/main.2d3bcf30.css",
+    "static/js/main.718c954c.js"
   ]
 }
