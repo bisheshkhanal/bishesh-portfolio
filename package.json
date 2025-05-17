@@ -1,6 +1,5 @@
 {
   "name": "bishesh-portfolio",
-  "homepage": "https://bisheshkhanal.github.io/bishesh-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
