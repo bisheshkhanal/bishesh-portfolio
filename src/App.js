@@ -1,15 +1,19 @@
 // Root: src/App.js
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import About from './pages/About';
 import './App.css';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProjectDetail from './pages/ProjectDetail';
 import FlappyGame from './pages/FlappyGame';
+import Navbar from './components/Navbar';
 
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   useEffect(() => {
     const revealElements = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(entries => {
@@ -26,29 +30,49 @@ function App() {
     return () => observer.disconnect(); // clean up on unmount
   }, []);
 
+  // Scroll to skills section handler
+  const handleSkillsNav = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/?scroll=skills");
+    } else {
+      const el = document.getElementById('skills-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Scroll to contact section handler
+  const handleContactNav = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/?scroll=contact");
+    } else {
+      const el = document.getElementById('contact-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <Router>
-      <div className="app-container">
-        <nav className="navbar">
-          <h1 className="nav-brand">Bishesh Khanal</h1>
-          <div className="nav-links">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/projects" className="nav-link">Projects</Link>
-            <Link to="/about" className="nav-link">About</Link>
-          </div>
-        </nav>
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:id" element={<ProjectDetail />} />
-            <Route path="/projects/flappy-bird" element={<FlappyGame />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <div className="app-container">
+      <Navbar handleSkillsNav={handleSkillsNav} handleContactNav={handleContactNav} />
+      <div style={{ height: "80px" }} />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="/projects/flappy-bird" element={<FlappyGame />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
-export default App;
+export default function AppWithRouter() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}

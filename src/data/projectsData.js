@@ -48,7 +48,18 @@ const projects = [
     images: [],
     demoLink: `${process.env.PUBLIC_URL}/flappy/flappy.html`, 
     repoLink: "https://github.com/pranabmainali/Flappy_Bird_Game"
-  }
+  },
+  {
+  id: "portfolio-website",
+  title: "Personal Portfolio Website",
+  description:
+    "Responsive React portfolio deployed on GitHub Pages, featuring animated navigation, skill badges, and interactive project cards.",
+  technologies: ["React", "CSS", "GitHub Pages", "GitHub Actions"],
+  images: [], 
+  demoLink: "https://bisheshkhanal.github.io/bishesh-portfolio", // Use your actual GitHub Pages link
+  repoLink: "https://github.com/bisheshkhanal/bishesh-portfolio"
+  },
+  
 ];
 
 export default projects;
