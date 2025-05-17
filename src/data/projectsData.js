@@ -53,7 +53,7 @@ const projects = [
   id: "portfolio-website",
   title: "Personal Portfolio Website",
   description:
-    "Responsive React portfolio deployed on Vercel, featuring animated navigation, skill badges, and interactive project cards.",
+    "You're on it! Responsive React portfolio deployed on Vercel, featuring animated navigation, skill badges, and interactive project cards.",
   technologies: ["React", "CSS", "Vercel"],
   images: [], 
   demoLink: "https://bishesh-portfolio.vercel.app/", 

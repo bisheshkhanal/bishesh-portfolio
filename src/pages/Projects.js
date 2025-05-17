@@ -46,7 +46,7 @@ export default function Projects() {
         marginTop: "-2.1rem",
         textAlign: "center"
       }}>
-        A selection of my work and experiments.
+        My development experience as I tried to learn and implement a variety of skills.
       </div>
       <div className="projects-pill-bg">
         <div className="project-grid">

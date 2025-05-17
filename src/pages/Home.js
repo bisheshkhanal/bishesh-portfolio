@@ -60,6 +60,7 @@ const skills = [
 
 export default function Home() {
   const [subheaderIdx, setSubheaderIdx] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -98,6 +99,16 @@ export default function Home() {
     }
   }, [location, navigate]);
 
+  // Optional: Close modal on Escape key
+  useEffect(() => {
+    if (!modalOpen) return;
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setModalOpen(false);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [modalOpen]);
+
   return (
     <>
       <section className="home-about-combined intro-gradient">
@@ -107,7 +118,9 @@ export default function Home() {
               data-aos="fade-up"
               src={profile}
               alt="Bishesh Khanal"
-              style={{ width: "180px", height: "180px", borderRadius: "50%", objectFit: "cover", border: "2px solid var(--accent)" }}
+              style={{ width: "180px", height: "180px", borderRadius: "50%", objectFit: "cover", border: "2px solid var(--accent)", cursor: "pointer" }}
+              onClick={() => setModalOpen(true)}
+              title="Click to expand"
             />
             <div style={{ minWidth: 0 }}>
               <h1 className="main-hero-heading" data-aos="fade-up">
@@ -122,20 +135,35 @@ export default function Home() {
               </h2>
               <p className="subheader-animation">{subheaders[subheaderIdx]}</p>
               <p data-aos="fade-up" style={{ marginBottom: "1rem" }}>
-                I'm a Computer Science and Biology student at the University of Calgary, passionate about building secure,
-                scalable systems and full-stack applications.
+                I'm a Computer Science and Biology student at the University of Calgary. I'm passionate about learning 
+                and building secure, scalable systems and full-stack applications.
               </p>
               <p data-aos="fade-up" style={{ marginBottom: "1rem" }}>
-                I like creating projects that go beyond CRUD — things involving real protocols, networking, distributed logic,
-                or low-level control. My work reflects a drive for practical impact and technical depth.
+                I like development that goes beyond CRUD, and involves real protocols, networking, distributed logic,
+                or low-level control. I aim for work that reflects a drive for practical impact and technical depth.
               </p>
               <p data-aos="fade-up" style={{ marginBottom: "1rem" }}>
-                Outside tech, I explore fitness science, personal development, and philosophy — always aiming to improve holistically.
+                Outside tech, I explore fitness science, personal development, and philosophy as I strive for wholistic growth.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Modal for expanded profile picture */}
+      {modalOpen && (
+        <div className="modal-backdrop" onClick={() => setModalOpen(false)}>
+          <div className="modal-image-wrapper" onClick={e => e.stopPropagation()}>
+            <img
+              src={profile}
+              alt="Full Bishesh Khanal"
+              className="modal-image"
+            />
+            <div className="modal-close" onClick={() => setModalOpen(false)}>×</div>
+          </div>
+        </div>
+      )}
+
       {/* Skills/Tech Section */}
       <section className="skills-section" id="skills-section">
         <h2 data-aos="fade-up">Skills & Technologies.</h2>
