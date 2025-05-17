@@ -53,10 +53,10 @@ const projects = [
   id: "portfolio-website",
   title: "Personal Portfolio Website",
   description:
-    "Responsive React portfolio deployed on GitHub Pages, featuring animated navigation, skill badges, and interactive project cards.",
-  technologies: ["React", "CSS", "GitHub Pages", "GitHub Actions"],
+    "Responsive React portfolio deployed on Vercel, featuring animated navigation, skill badges, and interactive project cards.",
+  technologies: ["React", "CSS", "Vercel"],
   images: [], 
-  demoLink: "https://bisheshkhanal.github.io/bishesh-portfolio", // Use your actual GitHub Pages link
+  demoLink: "https://bishesh-portfolio.vercel.app/", 
   repoLink: "https://github.com/bisheshkhanal/bishesh-portfolio"
   },
   
