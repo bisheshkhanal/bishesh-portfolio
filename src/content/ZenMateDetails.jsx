@@ -4,7 +4,7 @@ const ZenMateDetails = () => (
     <p>
       ZenMate is a full-stack meditation and mindfulness app designed to help users track sessions, maintain mental
       well-being, and stay motivated through social and AI-powered features. The app reflects solid system design,
-      scalable architecture, and thoughtful user-centric workflows.
+      scalable architecture, and thoughtful user-centric workflows. The following details outline the current planned core features that are in development. Tune-in for updates.
     </p>
 
     <h4>Planned Core Features</h4>
