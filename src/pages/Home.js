@@ -9,7 +9,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const subheaders = [
   "Backend. Systems. AI. Impact.",
-  "Distributed Systems. Network Protocols.",
+  "Distributed Systems. Networks.",
   "Cloud. Security. Scale.",
   "Full-stack. Real-world. Results."
 ];
@@ -131,7 +131,7 @@ export default function Home() {
                 Passionate about building practical, impactful systems.
               </div>
               <h2 data-aos="fade-up" className="typewriter" style={{ marginBottom: "1rem" }}>
-                Hey, I’m Bishesh. <br /> An aspiring developer.
+                Hey, I’m Bishesh. <br /> A software developer.
               </h2>
               <p className="subheader-animation">{subheaders[subheaderIdx]}</p>
               <p data-aos="fade-up" style={{ marginBottom: "1rem" }}>
