@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import ProjectDetail from './pages/ProjectDetail';
 import FlappyGame from './pages/FlappyGame';
 import Navbar from './components/Navbar';
+import Resume from './pages/Resume';
 
 function App() {
   const location = useLocation();
@@ -62,6 +63,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/projects/flappy-bird" element={<FlappyGame />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

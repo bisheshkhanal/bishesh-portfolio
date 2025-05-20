@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
-import { FaHome, FaTasks, FaUserAstronaut, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaTasks, FaUserAstronaut, FaEnvelope, FaFileAlt } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { createPortal } from "react-dom";
@@ -67,6 +67,13 @@ export default function Navbar({ handleSkillsNav, handleContactNav }) {
                 <FaEnvelope size={18} style={{ marginRight: 6, marginBottom: -3 }} />
                 Contact
               </a>
+              <Link
+                to="/resume"
+                className={`nav-link${location.pathname === "/resume" ? " active" : ""}`}
+              >
+                <FaFileAlt style={{ marginRight: 8 }} />
+                Resume
+              </Link>
             </div>
           </div>
         </>,
@@ -114,6 +121,13 @@ export default function Navbar({ handleSkillsNav, handleContactNav }) {
           <FaEnvelope size={18} style={{ marginRight: 6, marginBottom: -3 }} />
           Contact
         </a>
+        <Link
+          to="/resume"
+          className={`nav-link${location.pathname === "/resume" ? " active" : ""}`}
+        >
+          <FaFileAlt style={{ marginRight: 8 }} />
+          Resume
+        </Link>
       </div>
       {/* Hamburger Icon (Mobile Only) */}
       <div className="hamburger-menu" onClick={() => setOpen(o => !o)}>
